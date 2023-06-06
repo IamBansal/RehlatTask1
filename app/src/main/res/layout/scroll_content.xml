@@ -26,10 +26,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="18dp"
                 android:layout_marginVertical="10dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Select Room"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textSize="16sp"
                 tools:ignore="HardcodedText" />
 
             <LinearLayout
@@ -47,8 +47,10 @@
                     android:text="Free Breakfast"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    android:textSize="13sp"
-                    app:cornerRadius="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="12sp"
+                    app:cornerRadius="6dp"
+                    android:textStyle="normal"
                     tools:ignore="HardcodedText" />
 
                 <com.google.android.material.button.MaterialButton
@@ -60,8 +62,10 @@
                     android:text="Free Cancellation"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    android:textSize="13sp"
-                    app:cornerRadius="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="12sp"
+                    app:cornerRadius="6dp"
+                    android:textStyle="normal"
                     tools:ignore="HardcodedText" />
 
                 <com.google.android.material.button.MaterialButton
@@ -72,8 +76,10 @@
                     android:text="Pay Later"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    android:textSize="13sp"
-                    app:cornerRadius="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:cornerRadius="6dp"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -83,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:backgroundTint="@color/white"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -102,8 +108,9 @@
                             android:gravity="center"
                             android:text="Standard Single Room"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textStyle="normal"
                             tools:ignore="HardcodedText" />
 
                         <TextView
@@ -113,9 +120,12 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="5dp"
                             android:drawablePadding="5dp"
+                            android:fontFamily="@font/poppins"
                             android:gravity="center"
                             android:text="Max 2 Adults"
                             android:textColor="@color/black"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
                             app:drawableStartCompat="@drawable/ic_baseline_person_24"
                             tools:ignore="HardcodedText" />
 
@@ -123,7 +133,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="120dp"
                         android:layout_marginVertical="10dp"
                         android:background="@drawable/pic"
                         app:cardCornerRadius="15dp">
@@ -142,7 +152,8 @@
                         android:layout_height="wrap_content"
                         android:text="Room Only"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
                     <TextView
@@ -150,6 +161,8 @@
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
                         android:gravity="center"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins"
                         android:text="Non Refundable"
                         android:textColor="@color/black"
                         app:drawableStartCompat="@drawable/close"
@@ -161,55 +174,77 @@
                         android:layout_marginVertical="12dp">
 
                         <TextView
+                            android:id="@+id/text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:text="KWD 38.55 / night"
+                            android:text="KWD "
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_toEndOf="@id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="38.55"
+                            android:textColor="@color/red"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/poppins_semibold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_toEndOf="@id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text=" / night"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
                             tools:ignore="HardcodedText" />
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="90dp"
+                            android:layout_height="36dp"
                             android:layout_alignParentEnd="true"
                             android:backgroundTint="@color/red"
-                            app:cardCornerRadius="10dp">
+                            app:cardCornerRadius="6dp">
 
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:padding="10dp"
-                                android:weightSum="3">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:weightSum="3">-->
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:src="@drawable/subtract"
-                                    tools:ignore="ContentDescription" />
+<!--                                <ImageView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:src="@drawable/subtract"-->
+<!--                                    tools:ignore="ContentDescription" />-->
 
                                 <TextView
+                                    android:layout_gravity="center_horizontal"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginHorizontal="17dp"
-                                    android:layout_weight="1"
-                                    android:text="1"
+                                    android:padding="8dp"
+                                    android:text=" -     1     + "
                                     android:textColor="@color/white"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold"
+                                    android:textSize="14sp"
                                     tools:ignore="HardcodedText" />
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:src="@drawable/ic_baseline_add_24"
-                                    tools:ignore="ContentDescription" />
+<!--                                <ImageView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:src="@drawable/ic_baseline_add_24"-->
+<!--                                    tools:ignore="ContentDescription" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
 
                         </androidx.cardview.widget.CardView>
 
@@ -225,8 +260,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Room Only"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         tools:ignore="HardcodedText" />
 
                     <include
@@ -238,6 +274,7 @@
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginBottom="10dp"
                         app:dividerColor="@color/grey" />
 
@@ -245,8 +282,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bed And Breakfast"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         tools:ignore="HardcodedText" />
 
                     <TextView
@@ -254,6 +292,8 @@
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
                         android:gravity="center"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins"
                         android:text="Non Refundable"
                         android:textColor="@color/black"
                         app:drawableStartCompat="@drawable/close"
@@ -265,12 +305,35 @@
                         android:layout_marginVertical="12dp">
 
                         <TextView
+                            android:id="@+id/text3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:text="KWD 47.55 / night"
+                            android:text="KWD "
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_toEndOf="@id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="47.55"
+                            android:textColor="@color/red"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/poppins_semibold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_toEndOf="@id/text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text=" / night"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
                             tools:ignore="HardcodedText" />
 
                         <com.google.android.material.button.MaterialButton
@@ -278,14 +341,14 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginHorizontal="10dp"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="1dp"
                             android:backgroundTint="@color/white"
                             android:text="Select"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="14sp"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
-                            android:textStyle="bold"
-                            app:cornerRadius="7dp"
+                            app:cornerRadius="6dp"
                             app:strokeColor="@color/black"
                             app:strokeWidth="1dp"
                             tools:ignore="HardcodedText" />
@@ -303,7 +366,8 @@
                         android:layout_height="wrap_content"
                         android:text="Bed And Breakfast"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
                     <include
@@ -318,17 +382,18 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginHorizontal="15dp"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="10dp">
 
                 <RelativeLayout
+                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginVertical="10dp">
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -336,13 +401,15 @@
                         android:layout_centerVertical="true"
                         android:text="Deluxe double room"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_semibold"
                         tools:ignore="HardcodedText" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                         tools:ignore="ContentDescription" />
 
@@ -352,17 +419,19 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="10dp"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="10dp">
 
                 <RelativeLayout
+                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginVertical="10dp">
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -370,13 +439,15 @@
                         android:layout_centerVertical="true"
                         android:text="Two Bedroom Family Suite"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_semibold"
                         tools:ignore="HardcodedText" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                         tools:ignore="ContentDescription" />
 
@@ -386,18 +457,19 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="10dp">
 
                 <RelativeLayout
+                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginVertical="10dp">
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -405,11 +477,13 @@
                         android:layout_centerVertical="true"
                         android:text="Family Suite"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_semibold"
                         tools:ignore="HardcodedText" />
 
                     <ImageView
                         android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_baseline_arrow_forward_ios_24"
@@ -428,7 +502,9 @@
                 android:text="3 Room options"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                app:cornerRadius="20dp"
+                app:cornerRadius="18dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
@@ -452,8 +528,8 @@
             android:drawablePadding="10dp"
             android:text="KWD 214.55"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_semibold"
             app:drawableEndCompat="@drawable/ic_baseline_info_24"
             tools:ignore="HardcodedText" />
 
@@ -463,22 +539,27 @@
             android:layout_below="@id/tvTotal"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:textSize="11sp"
             android:layout_marginBottom="15dp"
             android:text="+ KWD 20 Taxes &amp; Fees"
             android:textColor="@color/darkGreyText"
             tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_margin="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="13dp"
             android:backgroundTint="@color/greenTwo"
-            android:padding="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingVertical="8dp"
             android:text="Reserve Now"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textStyle="bold"
+            android:textSize="16sp"
             app:cornerRadius="10dp"
             tools:ignore="HardcodedText" />
 

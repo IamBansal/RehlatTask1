@@ -9,8 +9,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawablePadding="10dp"
         android:gravity="center"
+        android:drawablePadding="8dp"
+        android:textSize="12sp"
         android:text="Free cancellation"
         android:textColor="@color/greenTwo"
         app:drawableEndCompat="@drawable/ic_baseline_info_24"
@@ -19,16 +20,19 @@
 
     <TextView
         android:layout_width="wrap_content"
+        android:textSize="11sp"
         android:textColor="@color/darkGreyText"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:text="before 03 Jun 11:59 PM"
         tools:ignore="HardcodedText" />
 
     <TextView
+        android:layout_marginTop="6dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawablePadding="10dp"
+        android:drawablePadding="8dp"
+        android:textSize="12sp"
         android:gravity="center"
         android:text="Book Now, Pay at property"
         android:textColor="@color/greenTwo"
@@ -39,23 +43,47 @@
     <TextView
         android:layout_width="wrap_content"
         android:textColor="@color/darkGreyText"
+        android:textSize="11sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:text="Pay KWD 20 now, Rest before 03 Jun 11:59 PM"
         tools:ignore="HardcodedText" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="12dp">
+        android:layout_marginTop="12dp">
 
         <TextView
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="KWD 44.00 / night"
+            android:text="KWD "
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_toEndOf="@id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="44.00"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_semibold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_toEndOf="@id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=" / night"
+            android:textColor="@color/black"
+            android:textSize="14sp"
             tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
@@ -63,14 +91,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="1dp"
             android:backgroundTint="@color/white"
             android:text="Select"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            app:cornerRadius="7dp"
+            app:cornerRadius="6dp"
             app:strokeColor="@color/black"
             app:strokeWidth="1dp"
             tools:ignore="HardcodedText" />

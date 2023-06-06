@@ -1,6 +1,6 @@
 <androidx.cardview.widget.CardView android:id="@+id/cardTop"
     android:layout_width="match_parent"
-    android:layout_height="420dp"
+    android:layout_height="400dp"
     android:layout_margin="15dp"
     app:cardCornerRadius="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,20 +28,21 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:padding="7dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/white"
-            android:drawablePadding="5dp"
             android:gravity="center"
             android:text="12-13 May"
+            android:textSize="11sp"
+            android:fontFamily="@font/poppins_medium"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            app:cornerRadius="20dp"
+            app:cornerRadius="15dp"
             app:icon="@drawable/calendar"
             app:iconGravity="textStart"
             app:iconTint="@color/black"
@@ -49,7 +50,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="173dp"
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp"
             android:backgroundTint="@color/white"
@@ -66,20 +67,22 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="5dp"
                     android:gravity="center"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="5 Star Hotel"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
                     app:drawableStartCompat="@drawable/ic_baseline_star_24"
                     tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp"
                     android:text="JW Marriott Hotel Dubai"
                     android:textColor="@color/black"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -87,34 +90,48 @@
                     android:layout_height="wrap_content"
                     android:text="Sheikh Zayed Road, Business Bay, Dubai"
                     android:textColor="#858484"
+                    android:textSize="11sp"
                     tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="5dp"
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="46dp"
+                        android:layout_height="33dp"
                         android:layout_marginEnd="7dp"
                         android:backgroundTint="@color/green"
                         android:gravity="center"
                         android:text="4.0"
+                        app:iconPadding="4dp"
+                        android:padding="1dp"
+                        android:textSize="11sp"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:cornerRadius="8dp"
+                        app:cornerRadius="5dp"
+                        app:iconGravity="textStart"
                         app:icon="@drawable/ic_baseline_info_24"
-                        app:iconGravity="start"
                         app:iconTint="@color/black"
                         tools:ignore="HardcodedText" />
 
-                    <com.google.android.material.textview.MaterialTextView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="154 Reviews"
+                        android:text="154"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Reviews"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/poppins"
                         android:textColor="@color/darkGreyText"
                         tools:ignore="HardcodedText" />
 
@@ -137,9 +154,8 @@
                         android:layout_marginStart="7dp"
                         android:drawablePadding="7dp"
                         android:text="Tourism fee is imposed by the city &amp; collected at the property. The fee is AED 20 for the room."
-                        android:textColor="@color/darkGreyText"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
                         app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
                         tools:ignore="HardcodedText" />
 

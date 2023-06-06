@@ -1,8 +1,8 @@
 package com.example.rehlattask1
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.rehlattask1.databinding.ActivityMainBinding
 import com.google.android.material.appbar.AppBarLayout
 import kotlin.math.abs
