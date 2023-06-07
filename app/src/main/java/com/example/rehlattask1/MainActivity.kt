@@ -3,6 +3,7 @@ package com.example.rehlattask1
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.rehlattask1.databinding.ActivityMainBinding
 import com.google.android.material.appbar.AppBarLayout
 import kotlin.math.abs
@@ -10,6 +11,7 @@ import kotlin.math.abs
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var itemAdapter: ItemAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +19,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setCustomToolbarAfterCollapsing()
+        setUpRecyclerView()
+    }
+
+    private fun setUpRecyclerView() {
+        binding.rvContent.apply {
+            itemAdapter = ItemAdapter()
+            val list = listOf(
+                RoomItem("Standard Single Room"),
+                RoomItem("Deluxe Double Room"),
+                RoomItem("Two Bedroom Family Suite"),
+                RoomItem("Family Suite"),
+            )
+            itemAdapter.differ.submitList(list)
+            adapter = itemAdapter
+            layoutManager = LinearLayoutManager(this@MainActivity)
+        }
     }
 
     private fun setCustomToolbarAfterCollapsing() {
