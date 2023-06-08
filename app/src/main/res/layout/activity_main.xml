@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/grey"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".task1.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -69,7 +69,7 @@
         android:background="@color/grey"
         android:paddingBottom="100dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context=".MainActivity"
+        tools:context=".task1.MainActivity"
         tools:showIn="@layout/activity_main" />
 
     <com.google.android.material.button.MaterialButton

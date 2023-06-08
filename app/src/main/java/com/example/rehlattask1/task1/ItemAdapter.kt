@@ -1,4 +1,4 @@
-package com.example.rehlattask1
+package com.example.rehlattask1.task1
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

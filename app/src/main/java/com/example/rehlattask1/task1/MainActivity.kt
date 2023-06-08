@@ -1,4 +1,4 @@
-package com.example.rehlattask1
+package com.example.rehlattask1.task1
 
 import android.os.Bundle
 import android.view.View
