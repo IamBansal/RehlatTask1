@@ -33,7 +33,7 @@ class HotelOffersAdapter(
         val offer = offersList[position]
 
         binding.couponTxt.text = offer.couponCode
-        binding.couponDescTxt.text = offer.dealsHubDescription
+        binding.couponDescTxt.text = offer.dealsHubName
 
         if (offer.isActive!!) offerApply(binding)
         else offerRemove(binding)
