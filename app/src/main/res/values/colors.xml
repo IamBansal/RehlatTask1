@@ -13,4 +13,6 @@
     <color name="green">#6fdca6</color>
     <color name="greenTwo">#00aa6e</color>
     <color name="red">#ff234f</color>
+    <color name="hotel_offer_apply_green">#00aa6e</color>
+    <color name="helpful_tips">#ff234f</color>
 </resources>

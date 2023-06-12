@@ -1,17 +1,12 @@
 package com.example.rehlattask1.task2.view
 
-import android.content.res.Resources
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.CompositePageTransformer
-import androidx.viewpager2.widget.MarginPageTransformer
 import com.example.rehlattask1.databinding.ActivityMain2Binding
-import com.example.rehlattask1.task2.adapter.CarouselRVAdapter
 import com.example.rehlattask1.task2.adapter.HotelOffersAdapter
 import com.example.rehlattask1.task2.model.response.LstDealsPromo
 import com.example.rehlattask1.task2.repository.Repository
@@ -34,8 +29,6 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, factory)[ViewModel::class.java]
 
         observeResponse()
-        setCarouselEffectsOnViewPager()
-
     }
 
     private val hotelOffersCallback = object : HotelOffersAdapter.HotelOffersCallback {
@@ -55,25 +48,6 @@ class MainActivity : AppCompatActivity() {
                 "Offer with coupon code ${hotelOffersRemoteConfig.couponCode} is tried to be removed.",
                 Toast.LENGTH_SHORT
             ).show()
-        }
-
-    }
-
-    private fun setCarouselEffectsOnViewPager() {
-
-        binding.viewPager.apply {
-            clipChildren = false
-            clipToPadding = false
-            offscreenPageLimit = 3
-            (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-
-            val compositePageTransformer = CompositePageTransformer()
-            compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
-            compositePageTransformer.addTransformer { page, position ->
-                val r = 1 - abs(position)
-                page.scaleY = (0.80f + r * 0.20f)
-            }
-            setPageTransformer(compositePageTransformer)
         }
 
     }
@@ -106,12 +80,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpViewPager(lstDealsPromos: List<LstDealsPromo>?) {
         binding.viewPager.apply {
-
-            //If carousel effect is needed, use this....
-            adapter = CarouselRVAdapter(filterList(lstDealsPromos!!), hotelOffersCallback)
-
-            //If PagerAdapter to be used, then use this....
-//            adapter = HotelOffersAdapter(this@MainActivity, filterList(lstDealsPromos), hotelOffersCallback)
+            clipChildren = false
+            clipToPadding = false
+            offscreenPageLimit = 3
+            setPageTransformer(true) { page, position ->
+                val r = 1 - abs(position)
+                page.scaleY = (0.80f + r * 0.20f)
+            }
+            adapter = HotelOffersAdapter(this@MainActivity, filterList(lstDealsPromos!!), hotelOffersCallback)
         }
     }
 

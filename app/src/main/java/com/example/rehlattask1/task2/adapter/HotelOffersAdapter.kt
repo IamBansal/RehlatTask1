@@ -33,7 +33,7 @@ class HotelOffersAdapter(
         val offer = offersList[position]
 
         binding.couponTxt.text = offer.couponCode
-        binding.couponDescTxt.text = offer.couponCode
+        binding.couponDescTxt.text = offer.dealsHubDescription
 
         if (offer.isActive!!) offerApply(binding)
         else offerRemove(binding)
@@ -66,19 +66,19 @@ class HotelOffersAdapter(
     }
 
     private fun offerApply(binding: HotelItemVouchersApplyBinding) {
-        binding.hotelOfferLayout.setBackgroundResource(R.drawable.pic)
+//        binding.hotelOfferLayout.setBackgroundResource(R.drawable.hotel_offer_viewpager_remove_background)
         binding.offerRemoveImg.visibility = View.VISIBLE
         binding.couponApplyTxt.visibility = View.GONE
-        binding.couponTxt.setTextColor(ContextCompat.getColor(mContext, R.color.green))
-        binding.couponDescTxt.setTextColor(ContextCompat.getColor(mContext, R.color.grey))
+        binding.couponTxt.setTextColor(ContextCompat.getColor(mContext, R.color.hotel_offer_apply_green))
+        binding.couponDescTxt.setTextColor(ContextCompat.getColor(mContext, R.color.darkGreyText))
     }
 
     private fun offerRemove(binding: HotelItemVouchersApplyBinding) {
-        binding.hotelOfferLayout.setBackgroundResource(R.drawable.pic)
+//        binding.hotelOfferLayout.setBackgroundResource(R.drawable.hotel_offer_viewpager_remove_background)
         binding.offerRemoveImg.visibility = View.GONE
         binding.couponApplyTxt.visibility = View.VISIBLE
         binding.couponTxt.setTextColor(ContextCompat.getColor(mContext, R.color.black))
-        binding.couponDescTxt.setTextColor(ContextCompat.getColor(mContext, R.color.grey))
+        binding.couponDescTxt.setTextColor(ContextCompat.getColor(mContext, R.color.darkGreyText))
     }
 
     interface HotelOffersCallback {
