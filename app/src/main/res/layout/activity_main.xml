@@ -72,7 +72,16 @@
         tools:context=".task1.MainActivity"
         tools:showIn="@layout/activity_main" />
 
+    <include layout="@layout/room_popup"
+        android:id="@+id/roomPopupLayout"
+        android:visibility="gone"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="145dp"
+        android:layout_height="175dp"
+        android:layout_width="wrap_content" />
+
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/roomButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"

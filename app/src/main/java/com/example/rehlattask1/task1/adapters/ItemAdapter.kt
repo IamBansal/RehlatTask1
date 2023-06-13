@@ -1,4 +1,4 @@
-package com.example.rehlattask1.task1
+package com.example.rehlattask1.task1.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rehlattask1.databinding.RoomItemBinding
+import com.example.rehlattask1.task1.RoomItem
 
 class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder?>() {
 
-    private var selectedPosition = 0
-    private var lastSelectedPosition = -1
+    var onItemSelectedListener: OnItemSelectedListener? = null
+    var selectedPosition = 0
+    var lastSelectedPosition = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(RoomItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
@@ -25,6 +27,7 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder?>() {
             selectedPosition = holder.adapterPosition
             notifyItemChanged(lastSelectedPosition)
             notifyItemChanged(selectedPosition)
+            onItemSelectedListener?.onItemSelected(selectedPosition)
         }
         if (selectedPosition == holder.adapterPosition) {
             holder.binding.apply {
@@ -39,6 +42,10 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder?>() {
                 ivImage.visibility = View.VISIBLE
             }
         }
+    }
+
+    interface OnItemSelectedListener {
+        fun onItemSelected(position: Int)
     }
 
     override fun getItemCount(): Int {
