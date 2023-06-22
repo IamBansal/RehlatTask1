@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".task1.view.fragment.HotelPoliciesFragment"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Timings"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="Check in from  "
+                android:textColor="@color/blackLight"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/enter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="10:00 AM"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="Check out until  "
+                android:textColor="@color/blackLight"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_baseline_exit_to_app_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="11:00 AM"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="18dp"
+            app:dividerColor="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Children &amp; Extra Beds"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="One child under 12 years stays free of charge when using existing beds."
+            android:textColor="@color/blackLight"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/bullet_point_cropped" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="One child under 2 years stays free of charge in a child cot."
+            android:textColor="@color/blackLight"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/bullet_point_cropped" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="The number of extra beds/children's cot permitted in a room is 1."
+            android:textColor="@color/blackLight"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/bullet_point_cropped" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="18dp"
+            app:dividerColor="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Cancellation Policy"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Cancel before 3:00 PM on 3 Sep and get a 50% refund, minus the service fee."
+            android:textColor="@color/blackLight"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/bullet_point_cropped" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="If you need to cancel because of an emergency, we may be able to issue a refund."
+            android:textColor="@color/blackLight"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/bullet_point_cropped" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

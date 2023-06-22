@@ -1,4 +1,4 @@
-package com.example.rehlattask1.task1
+package com.example.rehlattask1.task1.view
 
 import android.os.Bundle
 import android.view.View
@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.rehlattask1.databinding.ActivityMainBinding
 import com.example.rehlattask1.task1.adapters.ItemAdapter
 import com.example.rehlattask1.task1.adapters.RoomPopupAdapter
+import com.example.rehlattask1.task1.model.RoomItem
+import com.example.rehlattask1.task1.view.fragment.MyDialogFragment
 import com.google.android.material.appbar.AppBarLayout
 import kotlin.math.abs
 
@@ -36,6 +38,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.headCard.card.setOnClickListener {
+            val dialogFragment = MyDialogFragment()
+            dialogFragment.show(supportFragmentManager, "MyDialogFragment")
+        }
     }
 
     private fun hidePopup() {

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:text="Swimming pool"
+    android:id="@+id/text"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="14dp"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:textColor="@color/blackLight"
+    android:drawablePadding="10dp"
+    tools:ignore="HardcodedText"
+    app:drawableStartCompat="@drawable/ic_baseline_person_24" />

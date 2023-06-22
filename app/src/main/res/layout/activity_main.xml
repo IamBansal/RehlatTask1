@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/grey"
     android:fitsSystemWindows="true"
-    tools:context=".task1.MainActivity">
+    tools:context=".task1.view.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -19,8 +19,8 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
             android:background="@color/grey"
+            android:fitsSystemWindows="true"
             android:minHeight="60dp"
             app:contentScrim="@color/grey"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
@@ -28,6 +28,7 @@
             app:toolbarId="@+id/toolbar">
 
             <include
+                android:id="@+id/headCard"
                 layout="@layout/head_card"
                 android:layout_width="match_parent"
                 android:layout_height="420dp"
@@ -51,10 +52,10 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/customToolbar"
             android:layout_width="match_parent"
-            android:visibility="gone"
             android:layout_height="wrap_content"
             android:layout_marginStart="-15dp"
-            android:layout_marginTop="-60dp">
+            android:layout_marginTop="-60dp"
+            android:visibility="gone">
 
             <include layout="@layout/head_toolbar" />
 
@@ -69,16 +70,17 @@
         android:background="@color/grey"
         android:paddingBottom="100dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context=".task1.MainActivity"
+        tools:context=".task1.view.MainActivity"
         tools:showIn="@layout/activity_main" />
 
-    <include layout="@layout/room_popup"
+    <include
         android:id="@+id/roomPopupLayout"
-        android:visibility="gone"
+        layout="@layout/room_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="175dp"
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="145dp"
-        android:layout_height="175dp"
-        android:layout_width="wrap_content" />
+        android:visibility="gone" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/roomButton"

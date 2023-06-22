@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rehlattask1.databinding.RoomItemBinding
-import com.example.rehlattask1.task1.RoomItem
+import com.example.rehlattask1.task1.model.RoomItem
 
 class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder?>() {
 

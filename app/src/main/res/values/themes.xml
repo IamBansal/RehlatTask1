@@ -19,4 +19,20 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+    <style name="CustomTabText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <!-- Customize text style properties as per your requirements -->
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="textAllCaps">false</item>
+        <!-- Add any other desired text style attributes -->
+    </style>
+    <style name="TabText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <!-- Customize text style properties as per your requirements -->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="textAllCaps">false</item>
+        <!-- Add any other desired text style attributes -->
+    </style>
 </resources>
