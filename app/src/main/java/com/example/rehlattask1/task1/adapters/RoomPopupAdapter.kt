@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rehlattask1.databinding.PopupRoomItemBinding
 import com.example.rehlattask1.task1.model.RoomItem
+import com.example.rehlattask1.task1.model.decrypted.Rooms
 
 class RoomPopupAdapter(private val itemAdapter: ItemAdapter) : RecyclerView.Adapter<RoomPopupAdapter.ViewHolder?>() {
 
@@ -46,13 +47,13 @@ class RoomPopupAdapter(private val itemAdapter: ItemAdapter) : RecyclerView.Adap
 
     override fun getItemCount(): Int { return differ.currentList.size }
 
-    private val differCallback = object : DiffUtil.ItemCallback<RoomItem>(){
-        override fun areItemsTheSame(oldItem: RoomItem, newItem: RoomItem): Boolean {
-            return oldItem.title == newItem.title
+    private val differCallback = object : DiffUtil.ItemCallback<Rooms>(){
+        override fun areItemsTheSame(oldItem: Rooms, newItem: Rooms): Boolean {
+            return oldItem.name == newItem.name
         }
 
         @SuppressLint("DiffUtilEquals")
-        override fun areContentsTheSame(oldItem: RoomItem, newItem: RoomItem): Boolean {
+        override fun areContentsTheSame(oldItem: Rooms, newItem: Rooms): Boolean {
             return oldItem == newItem
         }
     }
@@ -60,6 +61,6 @@ class RoomPopupAdapter(private val itemAdapter: ItemAdapter) : RecyclerView.Adap
     val differ = AsyncListDiffer(this, differCallback)
 
     inner class ViewHolder(val binding: PopupRoomItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: RoomItem) { binding.text1.text = item.title }
+        fun bind(item: Rooms) { binding.text1.text = item.name }
     }
 }

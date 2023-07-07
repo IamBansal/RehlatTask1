@@ -31,7 +31,7 @@
                 android:id="@+id/headCard"
                 layout="@layout/head_card"
                 android:layout_width="match_parent"
-                android:layout_height="420dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="13dp"
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax"
@@ -62,6 +62,14 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvContent"

@@ -41,6 +41,7 @@
                 app:drawableStartCompat="@drawable/enter" />
 
             <TextView
+                android:id="@+id/tvCheckIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"
@@ -66,6 +67,7 @@
                 app:drawableStartCompat="@drawable/ic_baseline_exit_to_app_24" />
 
             <TextView
+                android:id="@+id/tvCheckOut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"

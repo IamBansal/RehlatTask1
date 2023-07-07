@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rehlattask1.databinding.RoomItemBinding
 import com.example.rehlattask1.task1.model.RoomItem
+import com.example.rehlattask1.task1.model.decrypted.Rooms
 
 class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder?>() {
 
@@ -52,13 +53,13 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder?>() {
         return differ.currentList.size
     }
 
-    private val differCallback = object : DiffUtil.ItemCallback<RoomItem>(){
-        override fun areItemsTheSame(oldItem: RoomItem, newItem: RoomItem): Boolean {
-            return oldItem.title == newItem.title
+    private val differCallback = object : DiffUtil.ItemCallback<Rooms>(){
+        override fun areItemsTheSame(oldItem: Rooms, newItem: Rooms): Boolean {
+            return oldItem.name == newItem.name
         }
 
         @SuppressLint("DiffUtilEquals")
-        override fun areContentsTheSame(oldItem: RoomItem, newItem: RoomItem): Boolean {
+        override fun areContentsTheSame(oldItem: Rooms, newItem: Rooms): Boolean {
             return oldItem == newItem
         }
 
@@ -68,9 +69,9 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder?>() {
 
     inner class ViewHolder(val binding: RoomItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindVideo(item: RoomItem) {
-            binding.textView.text = item.title
-            binding.headText.text = item.title
+        fun bindVideo(item: Rooms) {
+            binding.textView.text = item.name
+            binding.headText.text = item.name
             binding.ivImage.setOnClickListener {
                 binding.card.visibility = View.VISIBLE
                 binding.textView.visibility = View.GONE

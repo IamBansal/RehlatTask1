@@ -18,6 +18,7 @@ import com.example.rehlattask1.task1.model.decrypted.PopularAmenity
 import com.example.rehlattask1.task1.repository.Repository
 import com.example.rehlattask1.task1.utils.Constants
 import com.example.rehlattask1.task1.utils.Resource
+import com.example.rehlattask1.task1.view.MainActivity
 import com.example.rehlattask1.task1.viewmodel.ViewModel
 import com.example.rehlattask1.task1.viewmodel.ViewModelProviderFactory
 import com.google.gson.Gson
@@ -39,8 +40,9 @@ class AmenitiesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val factory = ViewModelProviderFactory(Repository())
-        viewModel = ViewModelProvider(this, factory)[ViewModel::class.java]
+//        val factory = ViewModelProviderFactory(Repository())
+//        viewModel = ViewModelProvider(this, factory)[ViewModel::class.java]
+        viewModel = (activity as MainActivity).viewModel
         binding.nestedScroll.isNestedScrollingEnabled = true
         observeResponse()
 

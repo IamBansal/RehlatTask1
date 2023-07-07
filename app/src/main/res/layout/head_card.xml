@@ -1,6 +1,6 @@
 <androidx.cardview.widget.CardView android:id="@+id/cardTop"
     android:layout_width="match_parent"
-    android:layout_height="400dp"
+    android:layout_height="wrap_content"
     android:layout_margin="15dp"
     app:cardCornerRadius="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -8,8 +8,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
+        android:id="@+id/relativeLayoutHead"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/pic">
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -54,10 +55,9 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card"
             android:layout_width="match_parent"
-            android:layout_height="173dp"
-            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="180dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/white"
@@ -70,6 +70,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvStars"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawablePadding="5dp"
@@ -82,6 +83,7 @@
                     tools:ignore="HardcodedText" />
 
                 <TextView
+                    android:id="@+id/tvHotelName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -93,6 +95,7 @@
                     tools:ignore="HardcodedText" />
 
                 <TextView
+                    android:id="@+id/tvHotelAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sheikh Zayed Road, Business Bay, Dubai"
@@ -111,6 +114,7 @@
                         android:layout_width="46dp"
                         android:layout_height="33dp"
                         android:layout_marginEnd="7dp"
+                        android:id="@+id/btnRating"
                         android:backgroundTint="@color/green"
                         android:gravity="center"
                         android:padding="1dp"
@@ -129,6 +133,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_medium"
                         android:text="154"
+                        android:id="@+id/tvReviews"
                         android:textColor="@color/black"
                         android:textSize="11sp"
                         tools:ignore="HardcodedText" />
@@ -156,6 +161,7 @@
                         app:dividerColor="@color/red" />
 
                     <TextView
+                        android:id="@+id/tvInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginStart="7dp"
@@ -163,6 +169,7 @@
                         android:text="Tourism fee is imposed by the city &amp; collected at the property. The fee is AED 20 for the room."
                         android:textColor="@color/black"
                         android:textSize="11sp"
+                        android:maxLines="2"
                         app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
                         tools:ignore="HardcodedText" />
 
